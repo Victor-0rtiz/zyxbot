@@ -1,31 +1,28 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
 function Index() {
   const [mensaje, setMensaje] = useState("");
   const [respuesta, setRespuesta] = useState("");
 
-  const handleMensajeChange = (event) => {
-    setMensaje(event.target.value);
+ async function fetchData (){
+    try {
+      const response = await fetch("http://127.0.0.1:8000/consume-api", {
+        method: "POST",
+        body: JSON.stringify({ mensaje: mensaje }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+      setRespuesta(data.respuesta); // actualiza la propiedad 'respuesta' en lugar de 'respuesta'
+    } catch (error) {
+      setRespuesta(error.message);
+    }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    fetch("http://localhost:8000/api/mensaje", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ mensaje: mensaje }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setRespuesta(data.respuesta);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetchData();
   };
 
   return (
@@ -77,14 +74,16 @@ function Index() {
       </nav>
 
       <div className="bg-gray-700">
-        <form id="formchat" onSubmit={handleSubmit}>
-          <label htmlFor="mensaje">Mensaje</label>
-          <input type="text" id="mensaje" name="mensaje" value={mensaje} onChange={handleMensajeChange} />
-          <input type="submit" value="Enviar mensajes" />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="mensaje" // Agrega el atributo 'name' al campo
+            value={mensaje}
+            onChange={(e) => setMensaje(e.target.value)}
+          />
+          <button type="submit">Enviar</button>
         </form>
-        <div className="chat">
-            <p>{respuesta}</p>
-        </div>
+        <p>{respuesta}</p>
       </div>
     </>
   );

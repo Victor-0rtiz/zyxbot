@@ -12,7 +12,9 @@ class controllerapi extends Controller
     public function consumeAPI(Request $request)
     {
         // Obtener los datos de la solicitud del cliente
-        $data = $request->all();
+        $data =  $request->input('mensaje');
+        echo json_encode(["respuesta"=>"hola"]);
+         return;
 
         // Llamar a la función query() para realizar la solicitud a tu API
         $response = $this->query($data);
@@ -29,6 +31,10 @@ class controllerapi extends Controller
 
     private function query($data)
     {
+
+         echo json_encode(["respuesta"=>"hola"]);
+         return;
+        
         $client = new Client();
 
         try {
