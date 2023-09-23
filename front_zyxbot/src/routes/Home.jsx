@@ -5,7 +5,7 @@ import img_1 from "../img/1.webp";
 import img_2 from "../img/2.webp";
 import img_3 from "../img/3.webp";
 
-function Index() {
+function Home() {
   const [mensaje, setMensaje] = useState("");
   const [respuesta, setRespuesta] = useState("");
 
@@ -333,4 +333,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Home;
