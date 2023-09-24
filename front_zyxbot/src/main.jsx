@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import ErrorPage from "./routes/ErrorPage";
 import Home from "./routes/Home";
-import Login from "./routes/Registro";
+import Login from "./routes/Login";
 import "./index.css";
 
 
@@ -20,6 +20,13 @@ const router = createBrowserRouter([
     element: <Registro />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/login",
+    element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
