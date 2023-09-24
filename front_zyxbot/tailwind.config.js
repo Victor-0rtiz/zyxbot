@@ -5,6 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily:{
+      'mont':['Montserrat'],
+      'popp':['Poppins'],
+      'raj':['Rajdhani']
+    },
     extend: {},
   },
   plugins: [],
