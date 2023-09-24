@@ -16,7 +16,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.render(
-  <BrowserRouter basename="/zyxbot/front">
+  <BrowserRouter basename="/zyxbot/front_zyxbot">
     <Route exact path="/" component={Home} />
     {/* ... */}
   </BrowserRouter>,
