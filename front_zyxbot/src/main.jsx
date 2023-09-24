@@ -2,15 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import ErrorPage from "./routes/ErrorPage";
 import Home from "./routes/Home";
+import Login from "./routes/Registro";
 import "./index.css";
 
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Registro from "./routes/Registro";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/registro",
+    element: <Registro />,
     errorElement: <ErrorPage />,
   },
 ]);
