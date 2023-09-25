@@ -46,3 +46,5 @@ front_zyxbot/*.sw?
 
 
 vendor/
+# Local Netlify folder
+.netlify

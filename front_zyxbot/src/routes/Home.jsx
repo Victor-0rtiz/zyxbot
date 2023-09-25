@@ -70,7 +70,7 @@ function Home() {
               <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-800 hover:text-white">
                 INICIAR SESIÓN
               </button>
-              <button className="bg-blue-900 text-white px-4 py-2 rounded-lg   hover:bg-blue-500 hover:text-white">
+              <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg   hover:bg-blue-500 hover:text-white">
                 REGISTRARSE
               </button>
             </div>
@@ -241,6 +241,7 @@ function Home() {
           </div>
         </div>
       </section>
+
       {/*Registro home */}
       <section className="bg-gray-950 py-16">
         <div className="text-center">
