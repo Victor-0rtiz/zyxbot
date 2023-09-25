@@ -1,5 +1,6 @@
-import { useState } from "react";
+
 import { Outlet } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 import logo from "../img/Logo.webp";
 import img_1 from "../img/1.webp";
 import img_2 from "../img/2.webp";
@@ -42,42 +43,60 @@ function Home() {
       });
   };
 
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="bg-gray-950 py-4">
+      <nav className={`py-2 ${scrolling ? 'fixed top-0 left-0 right-0 bg-gray-950 bg-opacity-70' : 'bg-gray-950'} z-50`}>
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
-            <ul className="text-white text-2xl font-poppins font-bold flex space-x-6 items-center">
-              <li>
-                <a href="#">
-                  <img src={logo} alt="Logo ZyxBot" className="w-100 h-24 " />
+            <ul className="text-white text-xl font-poppins font-bold flex space-x-8 items-center">
+              <li className="relative flex items-center">
+                <a href="#" id="#inicio" className="flex items-center">
+                  <img src={logo} alt="Logo ZyxBot" className="w-52 h-auto" />
                 </a>
               </li>
-              <li>
-                <a href="#">Inicio</a>
+              <li className="relative flex items-center justify-center">
+                <a href="#inicio" className="hover:text-blue-500">Inicio</a>
               </li>
-              <li>
-                <a href="#">Ventajas</a>
+              <li className="relative flex items-center justify-center">
+                <a href="#ventajas" className="hover:text-blue-500">Ventajas</a>
               </li>
-              <li>
-                <a href="#">Opiniones</a>
+              <li className="relative flex items-center justify-center">
+                <a href="#" className="hover:text-blue-500">Opiniones</a>
               </li>
-              <li>
-                <a href="#">Soporte</a>
+              <li className="relative flex items-center justify-center">
+                <a href="#" className="hover:text-blue-500">Soporte</a>
               </li>
             </ul>
             <div className="flex space-x-4 font-poppins font-bold">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-800 hover:text-white">
+              <button className="bg-blue-500 text-white w-40 h-10 px-2 py-2 rounded-lg hover:bg-blue-800 hover:text-white">
                 INICIAR SESIÓN
               </button>
-              <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg   hover:bg-blue-500 hover:text-white">
+              <button className="bg-indigo-600 text-white w-40 h-10 px-2 py-2 rounded-lg hover:bg-blue-500 hover:text-white">
                 REGISTRARSE
               </button>
             </div>
           </div>
         </div>
       </nav>
-
+      
       <section className="bg-gradient-to-r from-rose-100 via-white to-white py-16">
         <div className="container mx-auto flex items-center justify-center">
           <div className="w-1/2 mr-8 ml-12">
@@ -174,8 +193,8 @@ function Home() {
           </div>
         </div>
       </section>
-
-      <section className="bg-gradient-to-r from-rose-100 via-white to-white py-16">
+      {/* Ventajas */}
+      <section id="ventajas" className="bg-gradient-to-r from-rose-100 via-white to-white py-16">
         <div className="container mx-auto justify-center ml-12">
           <h2 className="text-5xl font-mont mb-4 ">Ventajas de ZyxBot</h2>
           <p className=" font-popp mb-4">
