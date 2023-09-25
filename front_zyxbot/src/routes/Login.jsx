@@ -10,7 +10,7 @@ const Login = () => {
           <div className="mb-4 flex flex-col">
             <input
               type="text"
-              placeholder="Nombre"
+              placeholder="Usuario"
               className="px-10 py-4 bg-gray-900 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
             />
             <input

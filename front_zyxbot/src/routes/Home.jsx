@@ -7,13 +7,13 @@ import img_3 from "../img/3.webp";
 import img_4 from "../img/4.webp";
 import registro_log from "../img/Registrate.webp";
 import facebook from "../img/facebook.webp";
+import instagram from "../img/instagram.webp";
+import twitter from "../img/twitter.webp";
+import tiktok from "../img/tiktok.webp";
+import whatsapp from "../img/whatsapp.webp";
+import yotube from "../img/yotube.webp";
 
-
-
-
-
-
-
+import Ana_ft from "../img/Anaft.webp";
 
 function Home() {
   const [mensaje, setMensaje] = useState("");
@@ -186,7 +186,7 @@ function Home() {
             educativas.
           </p>
         </div>
-        <div className="container mx-auto  ">
+        <div className="container mx-auto">
           {/* Card debajo del párrafo */}
           <div className="flex space-x-10 container center">
             <div className="bg-slate-700 rounded-lg py-16  ">
@@ -241,7 +241,7 @@ function Home() {
           </div>
         </div>
       </section>
-      {/*Registro home*/}
+      {/*Registro home */}
       <section className="bg-gray-950 py-16">
         <div className="text-center">
           <h2 className="text-5xl text-white font-mont mb-4">
@@ -256,82 +256,60 @@ function Home() {
           <div className="w-1/2">
             <img
               src={registro_log}
-              alt="Imagen de ejemplo"
+              alt="Imagen de ZyxBot registro"
               className="w-full h-auto"
             />
           </div>
-          <div className="w-1/3 ml-8 flex flex-col items-center ">
-            {/* Input 1 */}
-            <div className="mb-4 ">
-              <input
-                type="text"
-                placeholder="Nombre"
-                className="px-20 py-4 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700"
-              />
-            </div>
+          <form className="w-1/3 ml-8 flex flex-col items-center ">
+            <input
+              type="text"
+              placeholder="Nombre"
+              className="w-80 h-14 px-8 py-2 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
+            />
+            <input
+              type="text"
+              placeholder="Apellido"
+              className="w-80 h-14 px-8 py-2 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
+            />
 
-            {/* Input 2 */}
-            <div className="mb-4">
-              <input
-                type="text"
-                placeholder="Apellido"
-                className="px-20 py-4 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700"
-              />
-            </div>
+            <input
+              type="email"
+              placeholder="Correo electrónico"
+              className="w-80 h-14 px-8 py-2 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
+            />
+            <input
+              type="password"
+              placeholder="Confirmar Contraseña"
+              className="w-80 h-14 px-8 py-2 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
+            />
 
-            {/* Input 3 */}
-            <div className="mb-4">
-              <input
-                type="email"
-                placeholder="Correo Electrónico"
-                className="px-20 py-4 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700"
-              />
-            </div>
+            <button className="w-30 h-10 font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-2 rounded-lg hover:bg-blue-200 transition duration-300 mb-4">
+              REGÍSTRARSE
+            </button>
+            <h3 className="text-center text-white font-popp mb-4 ">
+              ¿Ya tienes una Cuenta? Iniciemos sesión
+            </h3>
 
-            {/* Input 4 */}
-            <div className="mb-4">
-              <input
-                type="password"
-                placeholder="Confirmar Contraseña"
-                className="px-20 py-4 bg-gray-800 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
-              />
-
-              <h3 className="text-center text-white font-popp ">
-                ¿Ya tienes una Cuenta? Iniciemos sesión
-              </h3>
-            </div>
-
-            {/* Botón 1 */}
-            <div className="mb-4 ">
-              <button className=" font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-4 rounded-lg hover:bg-blue-200 transition duration-300   ">
-                REGÍSTRARSE
+            <div className="flex space-x-4">
+              <button className=" w-20 h-11 px-6 py-2  flex items-center rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 hover:bg-white transition duration-300 ease-in-out">
+                <img
+                  src={facebook}
+                  alt="Icono de facebook"
+                  className="w-8 h-8"
+                />
+              </button>
+              <button className=" w-20 h-11 px-6 py-2  rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 hover:bg-red-500 transition duration-300 ease-in-out">
+                <img src={facebook} alt="Icono de Google" className="w-8 h-8" />
               </button>
             </div>
-
-            <div className="flex  space-x-4">
-              {/* Botón 2 */}
-              <div className="mb-4">
-                <button className=" text-white px-8 py-2 rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 hover:bg-white transition duration-300 ease-in-out">
-                  <img src={facebook} alt="" className="w-10 h-10" />
-                </button>
-              </div>
-
-              {/* Botón 3 */}
-              <div className="mb-4">
-                <button className=" text-white px-8 py-2 rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 hover:bg-red-500 transition duration-300 ease-in-out">
-                  <img src={facebook} alt="" className="w-10 h-10" />
-                </button>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </section>
 
       {/*Seccion de testimonio*/}
-
       <section className="bg-rose-100 py-16">
         <div className="text-center">
-          <h2 className="text-5xl  font-mont mb-4 ">
+          <h2 className="text-5xl font-mont mb-4">
             ¿Qué dicen nuestros usuarios?
           </h2>
           <p className="text-gray-700 mb-8">
@@ -339,24 +317,25 @@ function Home() {
             mundo de posibilidades educativas.
           </p>
         </div>
-
         <div className="container mx-auto">
           <div className="flex space-x-10">
-            {/* Tarjetas en la parte izquierda */}
-            <div className="flex flex-col space-y-4 w-1/2">
-              {/* Card 1 */}
-              <div className="bg-white rounded-md p-4 border border-black flex">
-                <div className="rounded-full bg-black w-20 h-20 mx-4 flex-shrink-0">
-                  {/* Agrega tu imagen redonda aquí */}
+            <div className="flex flex-col w-1/2">
+              <div className="bg-white rounded-md px-4 p-3 border border-black">
+                <div className="flex items-center">
+                  <img
+                    src={Ana_ft}
+                    alt="Imagen de perfil de Ana"
+                    className="rounded-full w-20 h-20"
+                  />
+                  <div className="ml-4">
+                    <h2 className="text-2xl font-semibold">Ana Gómez</h2>
+                    <h3 className="text-xl font-semibold mb-2">
+                      anagómez@gmail.com
+                    </h3>
+                  </div>
                 </div>
-                <div>
-                  <h2 className="text-2xl font-semibold">Ana Gómez</h2>
-                  <h3 className="text-xl font-semibold mb-2">
-                    anagómez@gmail.com
-                  </h3>
-                  <p className="mr-12">
-                    {" "}
-                    {/* Agrega margen a la izquierda */}
+                <div className="mt-4 px-4">
+                  <p>
                     ZyxBot ha hecho que mi búsqueda universitaria sea mucho más
                     fácil. Pude obtener información sobre diferentes programas
                     de estudio y requisitos de admisión de manera rápida.
@@ -370,77 +349,58 @@ function Home() {
       </section>
 
       {/* CONSULTAS Y COMENTARIOS */}
-
       <section className="bg-gray-950 py-16">
         <h2 className="text-5xl text-white text-center font-mont mb-10">
           Envíanos tus consultas y comentarios
         </h2>
-        <div className="container mx-auto flex items-center justify-center  ">
-          <div className="w-1/3 ml-8 flex flex-col items-center">
-            {/* Input 1 */}
-            <div className="mb-4">
-              <input
-                type="text"
-                placeholder="Nombre y Apellido"
-                className="px-10 py-4 bg-zinc-800 text-white  text-xl rounded-md focus:outline-none focus:bg-gray-700"
-              />
-            </div>
+        <div className="flex">
+          <form className="w-1/3 ml-8 flex flex-col items-center">
+            <input
+              type="text"
+              placeholder="Nombres y Apellidos"
+              className="w-64 h-14 px-8 py-2 bg-gray-900 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
+            />
+            <input
+              type="text"
+              placeholder="Teléfono"
+              className=" w-64 h-14 px-8 py-2 bg-gray-900 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
+            />
+            <input
+              type="text"
+              placeholder="Correo electrónico"
+              className=" w-64 h-14 px-8 py-2 bg-gray-900 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
+            />
 
-            {/* Input 2 */}
-            <div className="mb-4">
-              <input
-                type="text"
-                placeholder="Teléfono"
-                className="px-10 py-4 bg-zinc-800 text-white  text-xl rounded-md focus:outline-none focus:bg-gray-700"
-              />
-            </div>
-
-            {/* Input 3 */}
-            <div className="mb-4">
-              <input
-                type="email"
-                placeholder="Correo Electrónico"
-                className="px-10 py-4 bg-zinc-800 text-white text-xl rounded-md focus:outline-none focus:bg-gray-700"
-              />
-            </div>
-
-            {/* Input 4 */}
-            <div className="mb-4 relative">
-              <textarea
-                placeholder="Mensaje"
-                rows="4"
-                className="px-10 py-4 bg-zinc-800 text-white  text-xl rounded-md focus:outline-none focus:bg-gray-700"
-              ></textarea>
-            </div>
-
-            {/* Botón 1 */}
-            <div className="mb-4 flex justify-center">
-              <button className="bg-gradient-to-r from-blue-950 via-blue-800 to-blue-700 text-white px-8 py-2 rounded-lg hover:bg-red transition duration-300">
-                REGÍSTRARSE
-              </button>
-            </div>
-          </div>
-          <div className="w-1/2 flex flex-col items-center">
-            <div className="mb-4">
+            <textarea
+              placeholder="Mensaje"
+              rows="4"
+              className="w-64  px-8 py-2 bg-gray-900 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
+            ></textarea>
+            <button className="w-30 h-10 font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-2 rounded-lg hover:bg-blue-200 transition duration-300">
+              ENVIAR
+            </button>
+          </form>
+          <div className="w-2/3 flex flex-col items-center">
+            <img src={logo} alt="Logo de ZyxBot" className="image-style mb-8" />
+            <div className="flex space-x-4">
+              <img src={twitter} alt="Icono de Twitter" className="w-10 h-10" />
               <img
-                src={logo}
-                alt="Imagen de ejemplo"
-                className="w-full h-auto"
+                src={instagram}
+                alt="Icono de instagram"
+                className="w-10 h-10"
               />
-            </div>
-            <div className="mb-4">
               <img
-                src={logo}
-                alt="Imagen de ejemplo"
-                className="w-16 h-16"
+                src={facebook}
+                alt="Icono de facebook"
+                className="w-10 h-10"
               />
-            </div>
-            <div className="mb-4">
+              <img src={tiktok} alt="Icono de tiktok" className="w-10 h-10" />
               <img
-                src={logo}
-                alt="Imagen de ejemplo"
-                className="w-16 h-16"
+                src={whatsapp}
+                alt="Icono de whatsapp"
+                className="w-10 h-10"
               />
+              <img src={yotube} alt="Icono de yotube" className="w-10 h-10" />
             </div>
           </div>
         </div>
@@ -505,6 +465,48 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <footer className="bg-zinc-800 text-white py-4">
+        <div className="container mx-auto text-center flex justify-center items-center flex-col">
+          <h2 className="text-3xl text-white font-mont mb-4">
+            SÍGANOS EN LAS REDES SOCIALES
+          </h2>
+          <div className="flex space-x-4 mb-4">
+            <img src={twitter} alt="Icono de Twitter" className="w-10 h-10" />
+            <img
+              src={instagram}
+              alt="Icono de instagram"
+              className="w-10 h-10"
+            />
+            <img src={facebook} alt="Icono de facebook" className="w-10 h-10" />
+            <img src={tiktok} alt="Icono de tiktok" className="w-10 h-10" />
+            <img src={whatsapp} alt="Icono de whatsapp" className="w-10 h-10" />
+            <img src={yotube} alt="Icono de yotube" className="w-10 h-10" />
+          </div>
+          <h2 className="text-3xl text-white font-mont mb-4">
+            REGÍSTRESE EN ZYXBOT AHORA
+          </h2>
+          <h6>
+            ¡Hola! Nos encanta verte por nuestro sitio web. Antes de que
+            empieces a utilizar nuestro sitio web, queremos informarte de que
+            nos servimos de cookies y tecnologías similares para mejorar tu
+            experiencia en el sitio, analizar el tráfico y el uso, personalizar
+            el contenido de acuerdo con tus preferencias y mejorar nuestro
+            marketing. Si utilizas nuestro sitio web, nos das tu consentimiento
+            para que nuestros socios y nosotros recopilemos, utilicemos,
+            recuperemos y almacenemos cookies y tecnologías similares en tu
+            ordenador o en otros dispositivos. Puedes retirar este
+            consentimiento en cualquier momento en la configuración del
+            navegador de tu ordenador o tus dispositivos. Haz clic en la
+            Política de cookies para consultar cómo puedes controlar el uso de
+            cookies mediante tu dispositivo. Tus datos se tratarán de acuerdo
+            con nuestra Política de privacidad.
+          </h6>
+        </div>
+        <p className="text-center">
+          Copyright &copy; 2023 ZixBot, Inc. Todos los derechos reservados.
+        </p>
+      </footer>
 
       <div className="bg-gray-700">
         <form id="formchat" onSubmit={handleSubmit}>
