@@ -63,11 +63,10 @@ function Home() {
   return (
     <>
       <nav
-        className={`py-2 ${
-          scrolling
+        className={`py-2 ${scrolling
             ? "fixed top-0 left-0 right-0 bg-[#040C1C] bg-opacity-50"
             : "bg-[#040C1C]"
-        } z-50`}
+          } z-50`}
       >
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
@@ -78,7 +77,7 @@ function Home() {
                 </a>
               </li>
               <li className="relative flex items-center justify-center">
-                <a href="#inicio" className="hover:text-blue-500">
+                <a href="#Bienvenida" className="hover:text-blue-500">
                   Inicio
                 </a>
               </li>
@@ -88,12 +87,12 @@ function Home() {
                 </a>
               </li>
               <li className="relative flex items-center justify-center">
-                <a href="#" className="hover:text-blue-500">
+                <a href="#opiniones" className="hover:text-blue-500">
                   Opiniones
                 </a>
               </li>
               <li className="relative flex items-center justify-center">
-                <a href="#" className="hover:text-blue-500">
+                <a href="#soporte" className="hover:text-blue-500">
                   Soporte
                 </a>
               </li>
@@ -111,7 +110,7 @@ function Home() {
       </nav>
 
       {/* Primer sección Bienvenida*/}
-      <section className="bg-gradient-to-r from-rose-100 via-white to-white py-16">
+      <section id="Bienvenida" className="bg-gradient-to-r from-rose-100 via-white to-white py-16">
         <div className="container mx-auto flex items-center justify-center">
           <div className="w-1/2 mr-8 ml-12">
             <h1 className="text-9xl font-raj bg-gradient-to-r from-blue-950 via-blue-900 to-purple-600 text-transparent bg-clip-text mb-12 ">
@@ -257,6 +256,28 @@ function Home() {
                 <h2 className="text-white text-2xl text-center font-semibold mb-4">
                   Información Confiable
                 </h2>
+                <div className="flex items-start mb-4">
+                  <svg
+                    width="37"
+                    height="35"
+                    viewBox="0 0 37 35"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="mr-2"
+                  >
+                    <path
+                      d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
+                      stroke="#2F80ED"
+                      stroke-width="7.98"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <p className="text-white text-justify mb-4 ml-8 mr-8">
+                    Acceder a información precisa y actualizada es esencial al explorar opciones educativas. ZyxBot te brinda la ventaja de obtener datos confiables sobre una amplia gama de universidades en Nicaragua.
+                  </p>
+                </div>
+                <div className="flex items-start mb-4">
                 <svg
                   width="37"
                   height="35"
@@ -273,33 +294,12 @@ function Home() {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <p className="text-white text-justify mb-4">
-                  Acceder a información precisa y actualizada es esencial al
-                  explorar opciones educativas. ZyxBot te brinda la ventaja de
-                  obtener datos confiables sobre una amplia gama de
-                  universidades en Nicaragua.
-                </p>
-                <svg
-                  width="37"
-                  height="35"
-                  viewBox="0 0 37 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M1 0H36V35H1V0Z" fill="white" fill-opacity="0.01" />
-                  <path
-                    d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
-                    stroke="#2F80ED"
-                    stroke-width="7.98"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p className="text-white text-justify mb-4">
+                <p className="text-white text-justify mb-4 ml-8 mr-8">
                   Nuestra plataforma te proporciona detalles exhaustivos sobre
                   programas académicos, requisitos de admisión, becas y más,
                   para que puedas tomar decisiones informadas.
                 </p>
+                </div>
               </div>
 
               <div className="bg-gradient-to-r from-[#333333] to-[#4D4D4D] rounded-s-3xl rounded-e-3xl py-16 flex flex-col items-center">
@@ -343,7 +343,7 @@ function Home() {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <p className="text-white text-justify mb-4">
+                <p className="text-white text-justify mb-4 ml-8 mr-8">
                   Imagina tener un experto en la información a tu disposición
                   las 24 horas del día. ZyxBot es tu asistente virtual listo
                   para responder a tus preguntas y brindarte orientación en
@@ -534,7 +534,7 @@ function Home() {
       </section>
 
       {/*Seccion de testimonio*/}
-      <section className="bg-rose-100 py-16">
+      <section id="opiniones" className="bg-rose-100 py-16">
         <div className="text-center">
           <h2 className="text-5xl font-mont mb-4">
             ¿Qué dicen nuestros usuarios?
@@ -576,7 +576,7 @@ function Home() {
       </section>
 
       {/* CONSULTAS Y COMENTARIOS */}
-      <section className="bg-gray-950 py-16">
+      <section id="soporte" className="bg-gray-950 py-16">
         <h2 className="text-5xl text-white text-center font-mont mb-10">
           Envíanos tus consultas y comentarios
         </h2>
