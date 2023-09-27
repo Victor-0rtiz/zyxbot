@@ -8,6 +8,7 @@ import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Registro from "./routes/Registro";
+import Chat from "./routes/Chat";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/chat",
+    element: <Chat/> ,
     errorElement: <ErrorPage />,
   },
 

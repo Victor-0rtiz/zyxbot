@@ -1,5 +1,7 @@
 import React from "react";
-import loginCover from '../img/LoginCover.webp'
+import loginCover from "../img/LoginCover.webp";
+import google from "../img/google.webp";
+import facebook from "../img/facebook.webp";
 
 const Login = () => {
   return (
@@ -19,22 +21,32 @@ const Login = () => {
               className="px-10 py-4 bg-gray-900 text-white rounded-md focus:outline-none focus:bg-gray-700 mb-4"
             />
           </div>
-          <div className="mb-4 flex justify-center">
-            <button className=" w-60 h-12 text-center font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-4 rounded-lg hover:bg-blue-200 transition duration-300">
-                INICIAR
+          <div className="mb-4 flex justify-center text-xl">
+            <button className=" w-60 h-12 text-center font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-2 rounded-lg ">
+              <a href="/chat">INICIAR</a>
             </button>
           </div>
-            <h3 className="text-center text-white font-semibold mb-4">
-              ¿Ya tienes una Cuenta? Iniciemos sesión
-            </h3>
-          <div className="mb-4 flex justify-center">
-            <button className="w-60 h-12 font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-4 rounded-lg hover:bg-blue-200 transition duration-300">
-            Facebook
+          <h3 className="text-center text-white font-semibold mb-4">
+            ¿Ya tienes una Cuenta? Iniciemos sesión
+          </h3>
+          <div className="mb-4 flex justify-center items-center text-xl">
+            <button className="w-60 h-12 font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-2 rounded-lg flex items-center">
+              <img
+                src={facebook}
+                alt="Icono de Facebook"
+                className="w-8 h-8 mr-8"
+              />
+              Facebook
             </button>
           </div>
-          <div className="mb-4 flex justify-center">
-            <button className="w-60 h-12 font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-4 rounded-lg hover:bg-blue-200 transition duration-300">
-            Google  
+          <div className="mb-4 flex justify-center items-center text-xl">
+            <button className="w-60 h-12 font-bold bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 text-white px-8 py-2 rounded-lg flex items-center">
+              <img
+                src={google}
+                alt="Icono de Google"
+                className="w-8 h-8 mr-8"
+              />
+              Google
             </button>
           </div>
         </form>

@@ -14,6 +14,11 @@ import whatsapp from "../img/whatsapp.webp";
 import yotube from "../img/yotube.webp";
 
 import Ana_ft from "../img/Anaft.webp";
+import Carlos_ft from "../img/Carlosft.webp";
+import Luis_ft from "../img/Luisft.webp";
+import Juan_ft from "../img/Juanft.webp";
+import User_ft from "../img/user.webp";
+import google from '../img/google.webp'
 
 function Home() {
   const [mensaje, setMensaje] = useState("");
@@ -99,12 +104,16 @@ function Home() {
               </li>
             </ul>
             <div className="flex space-x-4 font-poppins font-bold">
-              <button className="bg-blue-500 text-white w-40 h-10 px-2 py-2 rounded-lg hover:bg-blue-800 hover:text-white">
-                INICIAR SESIÓN
-              </button>
-              <button className="bg-gradient-to-r from-[#0C0076] via-blue-900 to-[#0061BF] text-white w-40 h-10 px-2 py-2 rounded-lg hover:bg-white hover:text-black">
-                REGISTRARSE
-              </button>
+              <a href="/login">
+                <button className="bg-blue-500 text-white w-40 h-10 px-2 py-2 rounded-lg hover:bg-blue-800 hover:text-white">
+                  INICIAR SESIÓN
+                </button>
+              </a>
+              <a href="/registro">
+                <button className="bg-[#0C0076] text-white w-40 h-10 px-2 py-2 rounded-lg hover:bg-blue-800 hover:text-white">
+                  REGISTRARSE
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -133,7 +142,7 @@ function Home() {
               educativo.
             </p>
             <a
-              href="#"
+              href="/chat"
               className="bg-gradient-to-r from-[#0C0076] via-blue-900 to-[#0061BF] text-white text-xl px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out"
             >
               IR AL CHAT
@@ -179,49 +188,53 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-rose-100 via-white to-white ">
-        <div className="container mx-auto flex items-center justify-center">
-          <div className="w-1/2 ml-12">
-            <h2 className="text-5xl font-mont mb-4">
-              ZyxBot Evoluciona Contigo
-            </h2>
-            <p className="font-popp mb-4">
-              En ZyxBot, estamos comprometidos a simplificar tu búsqueda
-              educativa y a ser tu compañero confiable en cada paso de tu viaje
-              académico. Descubre cómo nuestra plataforma integral puede marcar
-              la diferencia en tu proceso de toma de decisiones y ayudarte a
-              alcanzar tus metas educativas.
-            </p>
-            <p className="font-popp mb-4">
-              Estamos trabajando arduamente en el desarrollo de nuestra
-              aplicación móvil para que puedas acceder a la asistencia educativa
-              de ZyxBot desde cualquier lugar y en cualquier momento. Mantente
-              al tanto, ¡pronto podrás llevar ZyxBot en tu bolsillo!
-            </p>
-            <p className="font-popp mb-4">
-              Estamos agregando funciones emocionantes para hacer que tu
-              experiencia sea aún más enriquecedora. Pronto podrás disfrutar de
-              características como búsquedas avanzadas, recomendaciones
-              personalizadas y más.
-            </p>
-          </div>
-          <div className="w-1/2">
-            <img
-              src={img_3}
-              alt="zyxboy en dispositivos moviles"
-              className="w-full h-auto"
-            />
+      <section className="bg-gradient-to-r from-rose-100 via-white to-white">
+        <div className="container mx-auto justify-center ml-20">
+          <h2 className="text-5xl font-mont mb-4">ZyxBot Evoluciona Contigo</h2>
+          <p className="font-popp mb-4 py-2 mr-12">
+            En ZyxBot, estamos comprometidos a simplificar tu búsqueda educativa
+            y a ser tu compañero confiable en cada paso de tu viaje académico.
+            Descubre cómo nuestra plataforma integral puede marcar la diferencia
+            en tu proceso de toma de decisiones y ayudarte a alcanzar tus metas
+            educativas.
+          </p>
+        </div>
+        <div className="container mx-auto justify-center ml-20">
+          <div className="flex flex-col lg:flex-row">
+            <div className="lg:w-1/2 mr-20">
+              <p className="font-popp mb-4">
+                Estamos trabajando arduamente en el desarrollo de nuestra
+                aplicación móvil para que puedas acceder a la asistencia
+                educativa de ZyxBot desde cualquier lugar y en cualquier
+                momento. Mantente al tanto, ¡pronto podrás llevar ZyxBot en tu
+                bolsillo!
+              </p>
+              <p className="font-popp mb-4">
+                Estamos agregando funciones emocionantes para hacer que tu
+                experiencia sea aún más enriquecedora. Pronto podrás disfrutar
+                de características como búsquedas avanzadas, recomendaciones
+                personalizadas y más.
+              </p>
+            </div>
+            <div className="w-[400px]">
+              <img
+                src={img_3}
+                alt="zyxboy en dispositivos móviles"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
+
       {/* Ventajas */}
       <section
         id="ventajas"
         className="bg-gradient-to-r from-rose-100 via-white to-white py-16"
       >
-        <div className="container mx-auto justify-center">
-          <h2 className="text-5xl font-mont mb-4">Ventajas de ZyxBot</h2>
-          <p className="font-popp mb-4">
+        <div className="container mx-auto justify-center ml-20 ">
+          <h2 className="text-5xl font-mont mb-4 ">Ventajas de ZyxBot</h2>
+          <p className="font-popp mb-6 py-2 mr-12">
             En ZyxBot, estamos comprometidos a simplificar tu búsqueda educativa
             y ser tu compañero confiable en cada paso de tu viaje académico.
             Descubre cómo nuestra plataforma integral puede marcar la diferencia
@@ -235,11 +248,12 @@ function Home() {
             <div className="flex justify-center space-x-10">
               <div className="bg-gradient-to-r from-[#333333] to-[#4D4D4D] rounded-s-3xl rounded-e-3xl py-16 flex flex-col items-center">
                 <svg
-                  width="178"
-                  height="207"
+                  width="180"
+                  height="200"
                   viewBox="0 0 178 207"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="mb-10"
                 >
                   <g clip-path="url(#clip0_6_64)">
                     <path
@@ -257,10 +271,10 @@ function Home() {
                     </clipPath>
                   </defs>
                 </svg>
-                <h2 className="text-white text-2xl text-center font-semibold mb-4">
+                <h2 className="text-white text-4xl text-center font-semibold mb-10">
                   Información Confiable
                 </h2>
-                <p className="text-white text-justify mb-4 ml-8 mr-8">
+                <p className="text-white text-justify mb-4 ml-10 mr-14">
                   <div className="flex items-start mb-4">
                     <svg
                       width="80"
@@ -289,7 +303,7 @@ function Home() {
                     universidades en Nicaragua.
                   </div>
                 </p>
-                <p className="text-white text-justify mb-4 ml-8 mr-8">
+                <p className="text-white text-justify mb-4 ml-10 mr-14">
                   <div className="flex items-start mb-4">
                     <svg
                       width="80"
@@ -319,13 +333,14 @@ function Home() {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-r from-[#333333] to-[#4D4D4D] rounded-s-3xl  rounded-e-3xl py-20 flex flex-col items-center">
+              <div className="bg-gradient-to-r from-[#333333] to-[#4D4D4D] rounded-s-3xl  rounded-e-3xl py-16 flex flex-col items-center">
                 <svg
                   width="180"
                   height="200"
                   viewBox="0 0 196 180"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="mb-10"
                 >
                   <g clip-path="url(#clip0_6_119)">
                     <path
@@ -341,10 +356,10 @@ function Home() {
                     </clipPath>
                   </defs>
                 </svg>
-                <h2 className="text-white text-2xl text-center font-semibold mb-8">
+                <h2 className="text-white text-4xl text-center font-semibold mb-10">
                   Asistencia Virtual
                 </h2>
-                <p className="text-white text-justify mb-4 ml-14 mr-14">
+                <p className="text-white text-justify mb-4 ml-10 mr-14">
                   <div className="flex items-start mb-4">
                     <svg
                       width="80"
@@ -368,13 +383,13 @@ function Home() {
                       />
                     </svg>
                     Imagina tener un experto en la información a tu disposición
-                  las 24 horas del día. ZyxBot es tu asistente virtual listo
-                  para responder a tus preguntas y brindarte orientación en
-                  tiempo real.
+                    las 24 horas del día. ZyxBot es tu asistente virtual listo
+                    para responder a tus preguntas y brindarte orientación en
+                    tiempo real.
                   </div>
                 </p>
 
-                <p className="text-white text-justify mb-2 ml-14 mr-14">
+                <p className="text-white text-justify mb-2 ml-10 mr-14">
                   <div className="flex items-start mb-4">
                     <svg
                       width="80"
@@ -397,20 +412,21 @@ function Home() {
                         stroke-linejoin="round"
                       />
                     </svg>
-                    Nuestra inteligencia artificial está diseñada para comprender
-                  tus necesidades únicas y proporcionarte respuestas precisas y
-                  personalizadas.
+                    Nuestra inteligencia artificial está diseñada para
+                    comprender tus necesidades únicas y proporcionarte
+                    respuestas precisas y personalizadas.
                   </div>
                 </p>
               </div>
 
               <div className="bg-gradient-to-r from-[#333333] to-[#4D4D4D] rounded-s-3xl rounded-e-3xl py-16 flex flex-col items-center">
                 <svg
-                  width="195"
-                  height="195"
+                  width="185"
+                  height="200"
                   viewBox="0 0 195 195"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="mb-10"
                 >
                   <g clip-path="url(#clip0_6_128)">
                     <path
@@ -449,50 +465,64 @@ function Home() {
                   </defs>
                 </svg>
 
-                <h2 className="text-white text-2xl text-center font-semibold mb-2 ml-8">
+                <h2 className="text-white text-4xl text-center font-semibold mb-10">
                   Facilidad de Uso
                 </h2>
-                <svg
-                  width="37"
-                  height="35"
-                  viewBox="0 0 37 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M1 0H36V35H1V0Z" fill="white" fill-opacity="0.01" />
-                  <path
-                    d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
-                    stroke="#2F80ED"
-                    stroke-width="7.98"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p className="text-white text-justify mb-4 ml-8 mr-8">
-                  La búsqueda educativa puede ser abrumadora, pero ZyxBot la
-                  hace fácil. Navegar por nuestra plataforma es intuitivo y sin
-                  complicaciones.
+                <p className="text-white text-justify mb-2 ml-10 mr-14">
+                  <div className="flex items-start mb-4">
+                    <svg
+                      width="80"
+                      height="25"
+                      viewBox="0 0 37 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path
+                        d="M1 0H36V35H1V0Z"
+                        fill="white"
+                        fill-opacity="0.01"
+                      />
+                      <path
+                        d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
+                        stroke="#2F80ED"
+                        stroke-width="7.98"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    La búsqueda educativa puede ser abrumadora, pero ZyxBot la
+                    hace fácil. Navegar por nuestra plataforma es intuitivo y
+                    sin complicaciones.
+                  </div>
                 </p>
-                <svg
-                  width="37"
-                  height="35"
-                  viewBox="0 0 37 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M1 0H36V35H1V0Z" fill="white" fill-opacity="0.01" />
-                  <path
-                    d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
-                    stroke="#2F80ED"
-                    stroke-width="7.98"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p className="text-white text-justify mb-4 ml-8 mr-8">
-                  Hemos diseñado ZyxBot pensando en ti. Te ofrecemos una
-                  experiencia amigable y accesible para que encuentres la
-                  información que necesitas de manera rápida y sencilla.
+                <p className="text-white text-justify mb-2 ml-10 mr-14">
+                  <div className="flex items-start mb-4">
+                    <svg
+                      width="80"
+                      height="25"
+                      viewBox="0 0 37 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path
+                        d="M1 0H36V35H1V0Z"
+                        fill="white"
+                        fill-opacity="0.01"
+                      />
+                      <path
+                        d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
+                        stroke="#2F80ED"
+                        stroke-width="7.98"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Hemos diseñado ZyxBot pensando en ti. Te ofrecemos una
+                    experiencia amigable y accesible para que encuentres la
+                    información que necesitas de manera rápida y sencilla.
+                  </div>
                 </p>
               </div>
             </div>
@@ -550,15 +580,15 @@ function Home() {
             </h3>
 
             <div className="flex space-x-4">
-              <button className=" w-20 h-11 px-6 py-2  flex items-center rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 hover:bg-white transition duration-300 ease-in-out">
+              <button className=" w-20 h-11 px-6 py-2  flex items-center rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 ">
                 <img
                   src={facebook}
                   alt="Icono de facebook"
                   className="w-8 h-8"
                 />
               </button>
-              <button className=" w-20 h-11 px-6 py-2  rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700 hover:bg-red-500 transition duration-300 ease-in-out">
-                <img src={facebook} alt="Icono de Google" className="w-8 h-8" />
+              <button className=" w-20 h-11 px-6 py-2  rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-700">
+                <img src={google} alt="Icono de Google" className="w-8 h-8" />
               </button>
             </div>
           </form>
@@ -566,7 +596,7 @@ function Home() {
       </section>
 
       {/*Seccion de testimonio*/}
-      <section id="opiniones" className="bg-rose-100 py-16">
+      <section id="opiniones" className="bg-rose-100 py-16 ">
         <div className="text-center">
           <h2 className="text-5xl font-mont mb-4">
             ¿Qué dicen nuestros usuarios?
@@ -577,30 +607,103 @@ function Home() {
           </p>
         </div>
         <div className="container mx-auto">
-          <div className="flex space-x-10">
-            <div className="flex flex-col w-1/2">
-              <div className="bg-white rounded-md px-4 p-3 border border-black">
-                <div className="flex items-center">
-                  <img
-                    src={Ana_ft}
-                    alt="Imagen de perfil de Ana"
-                    className="rounded-full w-20 h-20"
-                  />
-                  <div className="ml-4">
-                    <h2 className="text-2xl font-semibold">Ana Gómez</h2>
-                    <h3 className="text-xl font-semibold mb-2">
-                      anagómez@gmail.com
-                    </h3>
-                  </div>
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-20 justify-center">
+            <div className="bg-white rounded-s-3xl rounded-e-3xl px-4 p-3 border border-black w-full sm:w-1/3">
+              <div className="flex items-center">
+                <img
+                  src={Ana_ft}
+                  alt="Imagen de perfil de Ana"
+                  className="rounded-full w-20 h-20"
+                />
+                <div className="ml-4">
+                  <h2 className="text-2xl font-semibold">Ana Gómez</h2>
+                  <h3 className="text-xl font-semibold mb-2">
+                    anagómez@gmail.com
+                  </h3>
                 </div>
-                <div className="mt-4 px-4">
-                  <p>
-                    ZyxBot ha hecho que mi búsqueda universitaria sea mucho más
-                    fácil. Pude obtener información sobre diferentes programas
-                    de estudio y requisitos de admisión de manera rápida.
-                    ¡Definitivamente recomiendo esta plataforma!
-                  </p>
+              </div>
+              <div className="mt-4 px-4">
+                <p>
+                  ZyxBot ha hecho que mi búsqueda universitaria sea mucho más
+                  fácil. Pude obtener información sobre diferentes programas de
+                  estudio y requisitos de admisión de manera rápida.
+                  ¡Definitivamente recomiendo esta plataforma!
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-s-3xl rounded-e-3xl px-4 p-3 border border-black w-full sm:w-1/3">
+              <div className="flex items-center">
+                <img
+                  src={Carlos_ft}
+                  alt="Imagen de perfil de Ana"
+                  className="rounded-full w-20 h-20"
+                />
+                <div className="ml-4">
+                  <h2 className="text-2xl font-semibold">Carlos Rodríguez</h2>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Carlos@gmail.com
+                  </h3>
                 </div>
+              </div>
+              <div className="mt-4 px-4">
+                <p>
+                  Como padre, estaba preocupado por ayudar a mi hijo a encontrar
+                  la universidad adecuada. ZyxBot nos brindó orientación y
+                  respuestas a todas nuestras preguntas. Estoy agradecido por
+                  esta valiosa herramienta.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8"></div>
+
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-20 justify-center">
+            <div className="bg-white rounded-s-3xl rounded-e-3xl px-4 p-3 border border-black w-full sm:w-1/3">
+              <div className="flex items-center">
+                <img
+                  src={Luis_ft}
+                  alt="Imagen de perfil de Ana"
+                  className="rounded-full w-20 h-20"
+                />
+                <div className="ml-4">
+                  <h2 className="text-2xl font-semibold">Luis González</h2>
+                  <h3 className="text-xl font-semibold mb-2">
+                    gonzález@gmail.com
+                  </h3>
+                </div>
+              </div>
+              <div className="mt-4 px-4">
+                <p>
+                  Utilizo ZyxBot como recurso adicional en mis clases para
+                  orientar a mis estudiantes sobre sus opciones educativas. La
+                  plataforma es intuitiva y proporciona información precisa
+                  sobre las universidades.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-s-3xl rounded-e-3xl px-4 p-3 border border-black w-full sm:w-1/3">
+              <div className="flex items-center">
+                <img
+                  src={Juan_ft}
+                  alt="Imagen de perfil de Ana"
+                  className="rounded-full w-20 h-20"
+                />
+                <div className="ml-4">
+                  <h2 className="text-2xl font-semibold">Juan Pérez</h2>
+                  <h3 className="text-xl font-semibold mb-2">
+                    juanPérez@gmail.com
+                  </h3>
+                </div>
+              </div>
+              <div className="mt-4 px-4">
+                <p>
+                  ZyxBot fue mi compañero durante mi búsqueda de universidad. Me
+                  ayudó a encontrar programas de estudio que se adaptaran a mis
+                  intereses y me proporcionó datos esenciales. ¡Gracias ZyxBot!
+                </p>
               </div>
             </div>
           </div>
@@ -672,7 +775,7 @@ function Home() {
             <h2 className="text-5xl font-mont mb-4 mt-10">
               Nuestro Equipo de Desarrollo
             </h2>
-            <p className="text-gray-700 mb-8 ">
+            <p className="text-gray-700 mb-8 font-popp">
               Detrás de ZyxBot se encuentra un equipo apasionado y altamente
               capacitado de profesionales de la tecnología y la educación.
               Nuestra dedicación es impulsar tu éxito académico al brindarte una
@@ -683,35 +786,84 @@ function Home() {
             <div className="flex items-center space-x-4 mb-8">
               <div className="rounded-full bg-black w-20 h-20 flex-shrink-0">
                 <img
-                  src={img_4}
+                  src={User_ft}
                   alt=""
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
               <div>
                 <h2 className="text-2xl font-semibold">
-                  Ana Gómez desarrollador
+                  Angel Erian Hernandez Aleman - Desarrollador
                 </h2>
                 <h3 className="text-xl font-semibold mb-2">
-                  anagómez@gmail.com
+                  erianhernandez97@gmail.com
                 </h3>
               </div>
             </div>
             <div className="flex items-center space-x-4 mb-8">
               <div className="rounded-full bg-black w-20 h-20 flex-shrink-0">
                 <img
-                  src={img_4}
+                  src={User_ft}
                   alt=""
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
               <div>
                 <h2 className="text-2xl font-semibold">
-                  Ana Gómez desarrollador
+                  Helen Sofia Vargas Lopez - Comunicadora
                 </h2>
                 <h3 className="text-xl font-semibold mb-2">
-                  anagómez@gmail.com
+                  helensofiavargaslopez@gmail.com
                 </h3>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4 mb-8">
+              <div className="rounded-full bg-black w-20 h-20 flex-shrink-0">
+                <img
+                  src={User_ft}
+                  alt=""
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold">
+                  Kevin Andres Garcia Moncada - Desarrollador
+                </h2>
+                <h3 className="text-xl font-semibold mb-2">
+                  kevingarcia231@gmail.com
+                </h3>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4 mb-8">
+              <div className="rounded-full bg-black w-20 h-20 flex-shrink-0">
+                <img
+                  src={User_ft}
+                  alt=""
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold">
+                  Keneth Ernest Macis Flores - Diseñador
+                </h2>
+                <h3 className="text-xl font-semibold mb-2">
+                  kenny48810354@gmail.com
+                </h3>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4 mb-8">
+              <div className="rounded-full bg-black w-20 h-20 flex-shrink-0">
+                <img
+                  src={User_ft}
+                  alt=""
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold">
+                  Víctor José Ortiz Bermudez - Desarrollador
+                </h2>
+                <h3 className="text-xl font-semibold mb-2">nerros@gmail.com</h3>
               </div>
             </div>
           </div>
@@ -774,23 +926,6 @@ function Home() {
           </p>
         </div>
       </footer>
-
-      <div className="bg-gray-700">
-        <form id="formchat" onSubmit={handleSubmit}>
-          <label htmlFor="mensaje">Mensaje</label>
-          <input
-            type="text"
-            id="mensaje"
-            name="mensaje"
-            value={mensaje}
-            onChange={handleMensajeChange}
-          />
-          <input type="submit" value="Enviar mensajes" />
-        </form>
-        <div className="chat">
-          <p>{respuesta}</p>
-        </div>
-      </div>
     </>
   );
 }
