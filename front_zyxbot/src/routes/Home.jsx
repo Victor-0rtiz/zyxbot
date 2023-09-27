@@ -63,10 +63,11 @@ function Home() {
   return (
     <>
       <nav
-        className={`py-2 ${scrolling
+        className={`py-2 ${
+          scrolling
             ? "fixed top-0 left-0 right-0 bg-[#040C1C] bg-opacity-50"
             : "bg-[#040C1C]"
-          } z-50`}
+        } z-50`}
       >
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
@@ -110,7 +111,10 @@ function Home() {
       </nav>
 
       {/* Primer sección Bienvenida*/}
-      <section id="Bienvenida" className="bg-gradient-to-r from-rose-100 via-white to-white py-16">
+      <section
+        id="Bienvenida"
+        className="bg-gradient-to-r from-rose-100 via-white to-white py-16"
+      >
         <div className="container mx-auto flex items-center justify-center">
           <div className="w-1/2 mr-8 ml-12">
             <h1 className="text-9xl font-raj bg-gradient-to-r from-blue-950 via-blue-900 to-purple-600 text-transparent bg-clip-text mb-12 ">
@@ -256,56 +260,69 @@ function Home() {
                 <h2 className="text-white text-2xl text-center font-semibold mb-4">
                   Información Confiable
                 </h2>
-                <div className="flex items-start mb-4">
-                  <svg
-                    width="37"
-                    height="35"
-                    viewBox="0 0 37 35"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="mr-2"
-                  >
-                    <path
-                      d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
-                      stroke="#2F80ED"
-                      stroke-width="7.98"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <p className="text-white text-justify mb-4 ml-8 mr-8">
-                    Acceder a información precisa y actualizada es esencial al explorar opciones educativas. ZyxBot te brinda la ventaja de obtener datos confiables sobre una amplia gama de universidades en Nicaragua.
-                  </p>
-                </div>
-                <div className="flex items-start mb-4">
-                <svg
-                  width="37"
-                  height="35"
-                  viewBox="0 0 37 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M1 0H36V35H1V0Z" fill="white" fill-opacity="0.01" />
-                  <path
-                    d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
-                    stroke="#2F80ED"
-                    stroke-width="7.98"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
                 <p className="text-white text-justify mb-4 ml-8 mr-8">
-                  Nuestra plataforma te proporciona detalles exhaustivos sobre
-                  programas académicos, requisitos de admisión, becas y más,
-                  para que puedas tomar decisiones informadas.
+                  <div className="flex items-start mb-4">
+                    <svg
+                      width="80"
+                      height="25"
+                      viewBox="0 0 37 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path
+                        d="M1 0H36V35H1V0Z"
+                        fill="white"
+                        fill-opacity="0.01"
+                      />
+                      <path
+                        d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
+                        stroke="#2F80ED"
+                        stroke-width="7.98"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Acceder a información precisa y actualizada es esencial al
+                    explorar opciones educativas. ZyxBot te brinda la ventaja de
+                    obtener datos confiables sobre una amplia gama de
+                    universidades en Nicaragua.
+                  </div>
                 </p>
-                </div>
+                <p className="text-white text-justify mb-4 ml-8 mr-8">
+                  <div className="flex items-start mb-4">
+                    <svg
+                      width="80"
+                      height="25"
+                      viewBox="0 0 37 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path
+                        d="M1 0H36V35H1V0Z"
+                        fill="white"
+                        fill-opacity="0.01"
+                      />
+                      <path
+                        d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
+                        stroke="#2F80ED"
+                        stroke-width="7.98"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Nuestra plataforma te proporciona detalles exhaustivos sobre
+                    programas académicos, requisitos de admisión, becas y más,
+                    para que puedas tomar decisiones informadas.
+                  </div>
+                </p>
               </div>
 
-              <div className="bg-gradient-to-r from-[#333333] to-[#4D4D4D] rounded-s-3xl rounded-e-3xl py-16 flex flex-col items-center">
+              <div className="bg-gradient-to-r from-[#333333] to-[#4D4D4D] rounded-s-3xl  rounded-e-3xl py-20 flex flex-col items-center">
                 <svg
-                  width="196"
-                  height="180"
+                  width="180"
+                  height="200"
                   viewBox="0 0 196 180"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -324,51 +341,66 @@ function Home() {
                     </clipPath>
                   </defs>
                 </svg>
-                <h2 className="text-white text-2xl text-center font-semibold mb-2">
+                <h2 className="text-white text-2xl text-center font-semibold mb-8">
                   Asistencia Virtual
                 </h2>
-                <svg
-                  width="37"
-                  height="35"
-                  viewBox="0 0 37 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M1 0H36V35H1V0Z" fill="white" fill-opacity="0.01" />
-                  <path
-                    d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
-                    stroke="#2F80ED"
-                    stroke-width="7.98"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p className="text-white text-justify mb-4 ml-8 mr-8">
-                  Imagina tener un experto en la información a tu disposición
+                <p className="text-white text-justify mb-4 ml-14 mr-14">
+                  <div className="flex items-start mb-4">
+                    <svg
+                      width="80"
+                      height="25"
+                      viewBox="0 0 37 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path
+                        d="M1 0H36V35H1V0Z"
+                        fill="white"
+                        fill-opacity="0.01"
+                      />
+                      <path
+                        d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
+                        stroke="#2F80ED"
+                        stroke-width="7.98"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Imagina tener un experto en la información a tu disposición
                   las 24 horas del día. ZyxBot es tu asistente virtual listo
                   para responder a tus preguntas y brindarte orientación en
                   tiempo real.
+                  </div>
                 </p>
-                <svg
-                  width="37"
-                  height="35"
-                  viewBox="0 0 37 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M1 0H36V35H1V0Z" fill="white" fill-opacity="0.01" />
-                  <path
-                    d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
-                    stroke="#2F80ED"
-                    stroke-width="7.98"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <p className="text-white text-justify mb-4 ml-8 mr-8">
-                  Nuestra inteligencia artificial está diseñada para comprender
+
+                <p className="text-white text-justify mb-2 ml-14 mr-14">
+                  <div className="flex items-start mb-4">
+                    <svg
+                      width="80"
+                      height="25"
+                      viewBox="0 0 37 35"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path
+                        d="M1 0H36V35H1V0Z"
+                        fill="white"
+                        fill-opacity="0.01"
+                      />
+                      <path
+                        d="M32.3541 8.02075L13.3046 26.9791L4.64575 18.3616"
+                        stroke="#2F80ED"
+                        stroke-width="7.98"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Nuestra inteligencia artificial está diseñada para comprender
                   tus necesidades únicas y proporcionarte respuestas precisas y
                   personalizadas.
+                  </div>
                 </p>
               </div>
 
