@@ -7,14 +7,18 @@ function Index() {
 
  async function fetchData (){
     try {
-      const response = await fetch("http://127.0.0.1:8000/consume-api", {
+      const response = await fetch("/prueba", {
         method: "POST",
         body: JSON.stringify({ mensaje: mensaje }),
       });
 
       const data = await response.json();
       console.log(data);
-      setRespuesta(data.respuesta); // actualiza la propiedad 'respuesta' en lugar de 'respuesta'
+      if (data.hasOwnProperty("respuesta")) {
+        setRespuesta(data.respuesta);
+      } else {
+        setRespuesta("Error al obtener la respuesta de la API");
+      }// actualiza la propiedad 'respuesta' en lugar de 'respuesta'
     } catch (error) {
       setRespuesta(error.message);
     }
