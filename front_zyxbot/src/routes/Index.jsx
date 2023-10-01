@@ -7,15 +7,15 @@ function Index() {
 
  async function fetchData (){
     try {
-      const response = await fetch("/prueba", {
+      const response = await fetch("http://127.0.0.1:8000/prueba", {
         method: "POST",
         body: JSON.stringify({ mensaje: mensaje }),
       });
 
       const data = await response.json();
-      console.log(data);
-      if (data.hasOwnProperty("respuesta")) {
-        setRespuesta(data.respuesta);
+      console.log(data.response["out-0"]);
+      if (data.hasOwnProperty('response') && data.response.hasOwnProperty('out-0')) {
+        setRespuesta(data.response["out-0"]);
       } else {
         setRespuesta("Error al obtener la respuesta de la API");
       }// actualiza la propiedad 'respuesta' en lugar de 'respuesta'
